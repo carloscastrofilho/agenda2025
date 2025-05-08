@@ -47,11 +47,31 @@ body,html {
  }
 
  .boxlogin {
-  width: 40%;
+  width: 500px;
   height: 100%;
   background-color: #1E1E1E;
   display: flex;
-
+  padding: 40px 90px;
+  gap: 40px;
   flex-direction: column;
-  background-color: #FFF;
+  background-color: #1D1D1D;
+ }
+
+ .paragrafo1 {
+   width: 100%;
+   height: 50px;
+   color: #fff;
+   text-align: right;
+ }
+
+ .paragrafo1 span {
+   color: lawngreen ;
+ }
+
+ .criarconta {
+   
+   color: #fff;
+   font-size: x-large;
+   font-weight: 700;
+
  }
