@@ -1,53 +1,101 @@
 * {
     margin: 0 ;
     padding: 0 ;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-body,html {
+root {
+  --background-primary: #111111;
+  --background-secondary: #1B1B1B ;
+  --background-tertiary: #303030;
+
+  --border-primary: #FFFFFF;
+  
+  --content-primary: #FFFFFF;
+  --content-body: #E2E2E2;
+  --content-heading: #C6C6C6;
+  --content-muted: #5E5E5E;
+  --content-placeholder: #777777;
+
+  --content-inverse: #111111;
+
+  --accent-brand: #C4F120;
+  --accent-red: #E61E32;
+
+}
+
+/* Schibsted Grotesk 
+  Name       Size Line Height    Weight
+heading       24px      32px      Regular 
+text large    16px      24px      Regular 
+text medium   14px      22px      Regular
+text small    12px      20px      Regular
+text xsmall   10px      14px      Regular
+label medium  14px      22px      Regular
+label small   12px      20px      Regular 
+*/
+
+@font-face {
+   font-family: 'heading';
+   src: local('League Gothic'), 
+        local('LeagueGothic'), 
+        url(../fonts/league-gothic/leaguegothic-regular-webfont-webfont.woff2) format('woff2')
+        url(../fonts/league-gothic/leaguegothic-regular-webfont.woff) format('woff');
+   font-style: normal;
+   font-weight: normal;
+ }
+
+html {
+  font-size:10px;
+  /* font-size: clamp(50%, 1vw + 0.5rem, 62.5%); */
+  font-family: 'Schibsted-Grotesk', Arial, Helvetica, sans-serif;
+}
+
+/* Tablets e Desktops: 1rem = 10px */
+@media (min-width: 768px) {
+  html {
+    font-size: 62.5%; /* 62.5% de 16px = 10px */
+  }
+}
+
+body {
    height: 100dvh;
+   background-color: #29292E;
 }
 
-@media (max-width: 1920px){
-    main {
-      width: 1230px;
-    }
-  }
-  
-  @media (max-width: 992px){
-    main {
-      width: 960px;
-      max-width: 100%;
-    }
-  }
-  
-  main {
-     height: 100%;
-     position: relative;
+main {
+     width: 136.0rem;
+     height: 73.6rem;
      margin-left: auto;
      margin-right: auto;
+     
      background-image: url('./imagens/background.svg');
      background-repeat: no-repeat;
      display: flex;
-  }
+     flex-direction: row;
+     justify-content: space-between;
+     
 
- .boxlogo {
-    width: 60%;
+}
+
+.boxlogo {
+    width: 89.6rem;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
     
- }
+}
 
- img {
-    margin-top: 60px;
-    margin-left: 180px;
-    width: 200px;
- }
+img {
+    margin-top: 5rem;
+    margin-left: 10rem;
+    width: 13rem;
+    height: 3rem;
+}
 
- .boxlogin {
-  width: 500px;
+.boxlogin {
+  width: 47rem;
   height: 100%;
   background-color: #1E1E1E;
   display: flex;
@@ -55,23 +103,24 @@ body,html {
   gap: 40px;
   flex-direction: column;
   background-color: #1D1D1D;
- }
+}
 
- .paragrafo1 {
+.paragrafo1 {
    width: 100%;
    height: 50px;
    color: #fff;
+   font-size: 1.6rem;
    text-align: right;
- }
+}
 
- .paragrafo1 span {
+.paragrafo1 span {
    color: lawngreen ;
- }
+   font-weight: 700;
+}
 
- .criarconta {
-   
+.criarconta {
    color: #fff;
-   font-size: x-large;
+   font-size: 3.2rem;
    font-weight: 700;
 
- }
+}
