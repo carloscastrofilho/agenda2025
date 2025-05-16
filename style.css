@@ -21,11 +21,37 @@ root {
 
   --accent-brand: #C4F120;
   --accent-red: #E61E32;
+  /* Fonte principal */
+  --font-family-primary: 'Schibsted Grotesk', sans-serif;
 
+  /* Heading */
+  --heading-font-size: 24px;
+  --heading-line-height: 32px;
+  --heading-font-weight: 400;
+
+  /* Text Sizes */
+  --text-large-font-size: 16px;
+  --text-large-line-height: 24px;
+
+  --text-medium-font-size: 14px;
+  --text-medium-line-height: 22px;
+
+  --text-small-font-size: 12px;
+  --text-small-line-height: 20px;
+
+  --text-xsmall-font-size: 10px;
+  --text-xsmall-line-height: 14px;
+
+  /* Labels */
+  --label-medium-font-size: 14px;
+  --label-medium-line-height: 22px;
+
+  --label-small-font-size: 12px;
+  --label-small-line-height: 20px;
 }
 
 /* Schibsted Grotesk 
-  Name       Size Line Height    Weight
+  Name       Size Line Height    Weightgit
 heading       24px      32px      Regular 
 text large    16px      24px      Regular 
 text medium   14px      22px      Regular
@@ -35,7 +61,44 @@ label medium  14px      22px      Regular
 label small   12px      20px      Regular 
 */
 
-@font-face {
+/* Utilitários de tipografia */
+.heading {
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-font-weight);
+}
+
+.text-large {
+  font-size: var(--text-large-font-size);
+  line-height: var(--text-large-line-height);
+}
+
+.text-medium {
+  font-size: var(--text-medium-font-size);
+  line-height: var(--text-medium-line-height);
+}
+
+.text-small {
+  font-size: var(--text-small-font-size);
+  line-height: var(--text-small-line-height);
+}
+
+.text-xsmall {
+  font-size: var(--text-xsmall-font-size);
+  line-height: var(--text-xsmall-line-height);
+}
+
+.label-medium {
+  font-size: var(--label-medium-font-size);
+  line-height: var(--label-medium-line-height);
+}
+
+.label-small {
+  font-size: var(--label-small-font-size);
+  line-height: var(--label-small-line-height);
+}
+
+/* @font-face {
    font-family: 'heading';
    src: local('League Gothic'), 
         local('LeagueGothic'), 
@@ -43,12 +106,10 @@ label small   12px      20px      Regular
         url(../fonts/league-gothic/leaguegothic-regular-webfont.woff) format('woff');
    font-style: normal;
    font-weight: normal;
- }
+ } */
 
 html {
   font-size:10px;
-  /* font-size: clamp(50%, 1vw + 0.5rem, 62.5%); */
-  font-family: 'Schibsted-Grotesk', Arial, Helvetica, sans-serif;
 }
 
 /* Tablets e Desktops: 1rem = 10px */
@@ -59,8 +120,11 @@ html {
 }
 
 body {
-   height: 100dvh;
-   background-color: #29292E;
+  height: 100dvh;
+  background-color: #29292E;
+  font-family: var(--font-family-primary);
+  font-size: var(--text-medium-font-size);
+  line-height: var(--text-medium-line-height);
 }
 
 main {
@@ -109,8 +173,8 @@ img {
    width: 100%;
    height: 50px;
    color: #fff;
-   font-size: 1.6rem;
    text-align: right;
+   var(--text-large);
 }
 
 .paragrafo1 span {
