@@ -1,57 +1,195 @@
+/* =====================
+   Variáveis CSS
+===================== */
+:root {
+  --font-family-primary: 'Schibsted Grotesk', sans-serif;
+
+  /* Font sizes */
+  --heading-font-size: 24px;
+  --heading-line-height: 32px;
+
+  --text-large-font-size: 16px;
+  --text-large-line-height: 24px;
+
+  --text-medium-font-size: 14px;
+  --text-medium-line-height: 22px;
+
+  --text-small-font-size: 12px;
+  --text-small-line-height: 20px;
+
+  --text-xsmall-font-size: 10px;
+  --text-xsmall-line-height: 14px;
+
+  --label-medium-font-size: 14px;
+  --label-medium-line-height: 22px;
+
+  --label-small-font-size: 12px;
+  --label-small-line-height: 20px;
+
+  /* Cores */
+  --color-background: #f9f9f9;
+  --color-text: #222;
+  --color-primary: #2a60ff;
+  --color-border: #ccc;
+  --color-footer: #666;
+}
+
+/* =====================
+   Reset básico
+===================== */
 * {
-    margin: 0 ;
-    padding: 0 ;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,html {
-   height: 100dvh;
+html {
+  font-family: var(--font-family-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  scroll-behavior: smooth;
 }
 
-@media (max-width: 1920px){
-    main {
-      width: 1230px;
-    }
-  }
-  
-  @media (max-width: 992px){
-    main {
-      width: 960px;
-      max-width: 100%;
-    }
-  }
-  
-  main {
-     height: 100%;
-     position: relative;
-     margin-left: auto;
-     margin-right: auto;
-     background-image: url('./imagens/background.svg');
-     background-repeat: no-repeat;
-     display: flex;
-  }
+body {
+  font-size: var(--text-medium-font-size);
+  line-height: var(--text-medium-line-height);
+}
 
- .boxlogo {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    
- }
+/* =====================
+   Tipografia utilitária
+===================== */
+.heading {
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
 
- img {
-    margin-top: 60px;
-    margin-left: 180px;
-    width: 200px;
- }
+.text-large {
+  font-size: var(--text-large-font-size);
+  line-height: var(--text-large-line-height);
+}
 
- .boxlogin {
-  width: 40%;
-  height: 100%;
-  background-color: #1E1E1E;
+.text-medium {
+  font-size: var(--text-medium-font-size);
+  line-height: var(--text-medium-line-height);
+}
+
+.text-small {
+  font-size: var(--text-small-font-size);
+  line-height: var(--text-small-line-height);
+}
+
+.text-xsmall {
+  font-size: var(--text-xsmall-font-size);
+  line-height: var(--text-xsmall-line-height);
+}
+
+.label-medium {
+  font-size: var(--label-medium-font-size);
+  line-height: var(--label-medium-line-height);
+}
+
+.label-small {
+  font-size: var(--label-small-font-size);
+  line-height: var(--label-small-line-height);
+}
+
+/* =====================
+   Layout
+===================== */
+header,
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--color-footer);
+}
+
+/* Logo */
+.boxlogo img {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Formulário */
+.login-section {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+form {
   display: flex;
-
   flex-direction: column;
-  background-color: #FFF;
- }
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--text-medium-font-size);
+}
+
+input:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Botão */
+button {
+  padding: 0.8rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: var(--text-large-font-size);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d47cc;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .boxlogo img {
+    max-width: 140px;
+  }
+
+  button {
+    font-size: var(--text-medium-font-size);
+  }
+}
