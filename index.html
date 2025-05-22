@@ -4,52 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Acessibilidade e Otimização Fatec Taquaritinga 1s 2025</title>
-    <meta
-        description="Projeto exemplo para uso nas disciplinas de Acesibilidade e Otimização para Buscas na Fatec Taquaritinga no 1 semestre de 2025" />
-    <meta name="robots" content="noodp, noydir" />
+    <title>Projeto Acessibilidade e Otimização | Fatec Taquaritinga 1º Semestre 2025</title>
+    <meta name="description" content="Projeto exemplo para uso nas disciplinas de Acessibilidade e Otimização para Buscas na Fatec Taquaritinga no 1º semestre de 2025.">
+    <meta name="robots" content="noodp, noydir">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <nav>
-
+        <nav aria-label="Menu principal">
+            <!-- Adicione links de navegação aqui -->
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
-
     </header>
 
     <main>
         <article>
-
+            <!-- Conteúdo principal do artigo -->
         </article>
 
-        <div class="boxlogo">
-            <img src="./imagens/logo.svg" alt="logo empresa" />
-        </div>
-        <div class="boxlogin">
-            <p> não tem uma conta? <span>Criar conta </span></p>
+        <figure class="boxlogo">
+            <img src="./imagens/logo.svg" alt="Logotipo da empresa" />
+        </figure>
 
-            <p> Acessar conta</p>
+        <section class="boxlogin" aria-label="Formulário de login">
+            <p>Não tem uma conta? <a href="#"><strong>Criar conta</strong></a></p>
 
-            <label>e-mail</label>
-            <input placeholder="Digite se e-mail" />
-            <label>senha</label>
-            <input placeholder="Digite sua senha" />
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Acessar conta</legend>
 
-            <button>Acessar conta</button>
-        </div>
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required>
+
+                    <label for="senha">Senha:</label>
+                    <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+
+                    <button type="submit">Acessar conta</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
-    <aside>
-
+    <aside aria-label="Informações adicionais">
+        <!-- Conteúdo complementar (notícias, links, anúncios, etc.) -->
     </aside>
-    
-    <footer>
 
+    <footer>
+        <p>&copy; 2025 Fatec Taquaritinga. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
