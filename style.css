@@ -1,57 +1,163 @@
 * {
-    margin: 0 ;
-    padding: 0 ;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
-body,html {
-   height: 100dvh;
+html,
+body {
+   height: 100vh;
+   background-image: url('./imagens/background.svg');
+
 }
 
-@media (max-width: 1920px){
-    main {
-      width: 1230px;
-    }
-  }
-  
-  @media (max-width: 992px){
-    main {
-      width: 960px;
-      max-width: 100%;
-    }
-  }
-  
-  main {
-     height: 100%;
-     position: relative;
-     margin-left: auto;
-     margin-right: auto;
-     background-image: url('./imagens/background.svg');
-     background-repeat: no-repeat;
-     display: flex;
-  }
+main {
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   height: 100vh;
+}
 
- .boxlogo {
-    width: 60%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    
- }
+.boxlogo {
+   background-color: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(5px);
+}
 
- img {
-    margin-top: 60px;
-    margin-left: 180px;
-    width: 200px;
- }
+.boxlogin {
+   width: 100%;
+   background-color: #1E1E1E;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
 
- .boxlogin {
-  width: 40%;
-  height: 100%;
-  background-color: #1E1E1E;
-  display: flex;
+.formu {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
 
-  flex-direction: column;
-  background-color: #FFF;
- }
+.boxlogin label {
+   margin-left: 0.3rem;
+   font-size: 1rem;
+   margin-bottom: 0.3rem;
+   color: white;
+}
+
+.boxlogin p,
+label {
+   color: white;
+}
+
+.boxlogin a {
+   color: rgb(196, 241, 32);
+   transition: color 0.5s;
+}
+
+.boxlogin a:hover {
+   color: rgb(100, 124, 14)
+}
+
+.boxlogin p {
+   color: white;
+   margin-top: 2rem;
+   padding-left: 4rem;
+   margin-bottom: 5rem;
+}
+
+.formu .acesso {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   color: white;
+   padding-left: 0.3rem;
+}
+
+.boxlogin input {
+   color: white;
+   margin-bottom: 1rem;
+   padding: 0.7rem;
+   border-radius: 15px;
+   border: 0;
+   width: 17rem;
+   background-color: #1e1e1e;
+   border: 1px solid rgb(86, 86, 86);
+}
+
+button {
+   background-color: rgb(196, 241, 32);
+   margin-left: 11rem;
+   border: 0;
+   border-radius: 10px;
+   height: 2rem;
+   width: 6rem;
+   cursor: pointer;
+   transition: background 0.5s;
+}
+
+button:hover {
+   background-color: rgb(100, 124, 14);
+}
+
+img {
+   margin-top: 60px;
+   margin-left: 180px;
+   width: 200px;
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      grid-template-columns: 1fr;
+   }
+
+   .boxlogo {
+      display: none;
+   }
+
+   .boxlogin {
+      width: 100%;
+      padding: 1rem;
+   }
+
+   img {
+      margin: 1rem auto;
+      width: 150px;
+   }
+
+   .formu {
+      width: 100%;
+   }
+
+   .boxlogin input {
+      width: 100%;
+   }
+
+   button {
+      width: 100%;
+      margin: 1rem 0 0 0;
+   }
+
+   .boxlogin p {
+      padding-left: 0;
+      text-align: center;
+   }
+
+   .formu .acesso {
+      padding-left: 0;
+   }
+
+   .boxlogin label {
+      margin-left: 0.2rem;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .boxlogin input {
+      font-size: 0.9rem;
+   }
+
+   button {
+      font-size: 1rem;
+   }
+}
