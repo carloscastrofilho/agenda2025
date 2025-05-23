@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Acessibilidade e Otimização Fatec Taquaritinga 1s 2025</title>
-    <meta description="Projeto exemplo para uso nas disciplinas de Acesibilidade e Otimização para Buscas na Fatec Taquaritinga no 1 semestre de 2025"/>
-    <meta name="robots" content="noodp, noydir"/>
+    <title>Projeto Acessibilidade e Otimização - Fatec Taquaritinga 1º Semestre 2025</title>
+
+    <meta name="description"
+        content="Projeto exemplo para uso nas disciplinas de Acessibilidade e Otimização para Buscas na Fatec Taquaritinga no 1º semestre de 2025" />
+    <meta name="robots" content="noodp, noydir" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <div class="boxlogo">
-            <img src="./imagens/logo.svg" alt="logo empresa" />
+            <img src="./imagens/logo.svg" alt="Logo da empresa" />
         </div>
-        <div class="boxlogin">
-            <p> não tem uma conta? <span>Criar conta </span></p>
 
-            <p> Acessar conta</p>
+        <section class="boxlogin" aria-labelledby="titulo-login">
+            <p>Não tem uma conta? <a href="#">Criar conta</a></p>
 
-            <label>e-mail</label>
-            <input placeholder="Digite se e-mail" />
-            <label>senha</label>
-            <input placeholder="Digite sua senha" />
+            <form class="formu" action="#" method="post">
+                <h1 id="titulo-login" class="acesso">Acessar conta</h1>
 
-            <button>Acessar conta</button>
-        </div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                <button type="submit">Acessar conta</button>
+            </form>
+        </section>
     </main>
+
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
+
 </html>
